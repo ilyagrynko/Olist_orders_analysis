@@ -83,7 +83,7 @@ Calendar = ADDCOLUMNS(
 CategoryOtherAdded = IF(ISBLANK(Delivery_analisys[product_category_name_english]), "Other", Delivery_analisys[product_category_name_english])
 ```
 
-Стовпчик, прймає значення True та False у випадках коли зафіксоване запізнення доставки:
+Стовпчик, що приймає значення True та False у випадках коли зафіксоване запізнення доставки:
 ```
 Deliv later then estim = Delivery_analisys[order_estimated_delivery_date] < Delivery_analisys[order_delivered_customer_date]
 ```
