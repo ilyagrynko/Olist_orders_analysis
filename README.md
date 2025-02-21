@@ -179,7 +179,7 @@ Orders Amount = COUNT(Orders_analisys[order_id])
 ```
 Total Payment Sum = SUM(Orders_analisys[payment_value])
 ```
-Також убли створені параметри для вибору різних стовпчиків даних у одній візуалізації:
+Також були створені параметри для вибору різних стовпчиків даних у одній візуалізації:
 Map Parameter:
 ```
 Map Parameter = {
