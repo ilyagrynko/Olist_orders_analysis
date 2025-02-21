@@ -63,7 +63,7 @@ Delivery\_analysis:\
 ![png](Delivery_analysis_table.png)
 
 ### Створення нових таблиць, стовпчиків та мір з використанням мови DAX
-##### Таблиця Calendar
+#### Таблиця Calendar
 Створена для візуалізацій, що базуються часі:
 ```
 Calendar = ADDCOLUMNS(
@@ -76,7 +76,7 @@ Calendar = ADDCOLUMNS(
     , "DayText", FORMAT([Date], "d")
     )
 ```
-##### Стовпчики та міри, додані до Delivery_analysis:
+#### Стовпчики та міри, додані до Delivery_analysis:
 ![png](CalendarTable.png)\
 Стовпчик, що дублює початковий стовпчик з категоріями товарів, але додає катеорію "Other" для порожніх позицій:
 ```
