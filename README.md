@@ -20,8 +20,8 @@
 На основі цих стовпчиків були створені два датасети - для дослідження кількості замовлень до доходу (Orders\_analysis.csv) та дослідження відсотку замовлень, що були доставлені пізніше за оцінений час доставки (Delivery\_analysis.csv).
 
 ### Зміст
-[Відбір та завантаження даних](#відбір-та-завантаження-даних)
-[Створення нових таблиць, стовпчиків та мір](#створення-нових-таблиць-стовпчиків-та-мір-з-використанням-мови-dax)
+[Відбір та завантаження даних](#відбір-та-завантаження-даних)\
+[Створення нових таблиць, стовпчиків та мір](#створення-нових-таблиць-стовпчиків-та-мір-з-використанням-мови-dax)\
 [Фінальний вигляд дашбордів](#фінальний-вигляд-дашбордів)
 
 ### Відбір та завантаження даних
@@ -56,10 +56,10 @@ LEFT JOIN customers c ON o.customer_id = c.customer_id
 GROUP BY o.order_id 
 ```
 
-Дані після імпорту та приведення значень до більш читабельного вигляду у MS Power BI:
-Orders\_analysis
-![png](Orders_analysis_table.png)
-Delivery\_analysis
+Дані після імпорту та приведення значень до більш читабельного вигляду у MS Power BI:\
+Orders\_analysis:\
+![png](Orders_analysis_table.png)\
+Delivery\_analysis:\
 ![png](Delivery_analysis_table.png)
 
 ### Створення нових таблиць, стовпчиків та мір з використанням мови DAX
@@ -77,7 +77,7 @@ Calendar = ADDCOLUMNS(
     )
 ```
 ##### Стовпчики та міри, додані до Delivery_analysis:
-![png](CalendarTable.png)
+![png](CalendarTable.png)\
 Стовпчик, що дублює початковий стовпчик з категоріями товарів, але додає катеорію "Other" для порожніх позицій:
 ```
 CategoryOtherAdded = IF(ISBLANK(Delivery_analisys[product_category_name_english]), "Other", Delivery_analisys[product_category_name_english])
@@ -105,8 +105,8 @@ IF(Delivery_analisys[order_status] = "delivered",
     )
 )
 ```
-Стовпчики CategoryOtherAdded, DelivLaterThenEstim та OrderDeliveredDate: 
-![png](AddedColumnsDelivery.png)
+Стовпчики CategoryOtherAdded, DelivLaterThenEstim та OrderDeliveredDate:\ 
+![png](AddedColumnsDelivery.png)\
 Міра LateDeliveryRate, що рахує частку доставок із запізненнями(порівняно з оціненим часом доставки) серед замовлень із статусом delivered:
 ```
 LateDeliveryRate = 
@@ -166,7 +166,7 @@ SWITCH(
     "TO", "Tocantins",
     "Unknown")
 ```
-![png](AddedColumnsOrders.png)
+![png](AddedColumnsOrders.png)\
 Міра Average Check:
 ```
 Average Check = SUM(Orders_analisys[payment_value]) / COUNT(Orders_analisys[order_id])
@@ -199,7 +199,7 @@ Table Parameter = {
 ![png](ModelView.png)
 
 ### Фінальний вигляд дашбордів
-##### Дашборд Orders:
+#### Дашборд Orders:
 ![png](OrdersDash1.png)
 Дашборд скаладається з: 
 * трьох карток, що демонструють основні показинки - кількість замовлень, суму, сплачену клієнтами за придбані товари та середній чек
@@ -210,7 +210,7 @@ Table Parameter = {
 Дашборд зі зміненими фільтрами:
 ![png](OrdersDash2.png)
 
-##### Дашборд Delivery:
+#### Дашборд Delivery:
 ![png](OrdersDash1.png)
 Дашборд скаладається з: 
 * однієї картки, що відображає частку доставок із запізненням
