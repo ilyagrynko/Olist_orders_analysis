@@ -123,7 +123,7 @@ RETURN
     IF(TotalOrders = 0, BLANK(), LateOrders / TotalOrders)
 ```
 ### Стовпчики та міри, додані до Orders_analysis:
-Стовпчик, що копіює тільки дату із стовпчика order\_purchase\_timestamp(час оформлення замовлення)
+Стовпчик, що копіює тільки дату із стовпчика order\_purchase\_timestamp (час оформлення замовлення)
 ```
 OrderPurchaseDate = 
     DATE(
@@ -132,7 +132,7 @@ OrderPurchaseDate =
         DAY(Orders_analisys[order_purchase_timestamp])
     )
 ```
-Стовпчик, виводит відповідну повну назву штату зі скороченої форми, що є у датасеті:
+Стовпчик, що виводить відповідну повну назву штату зі скороченої форми, що є у датасеті:
 ```
 Full State Name = 
 SWITCH(
