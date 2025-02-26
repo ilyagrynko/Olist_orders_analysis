@@ -179,8 +179,8 @@ Orders Amount = COUNT(Orders_analisys[order_id])
 ```
 Total Payment Sum = SUM(Orders_analisys[payment_value])
 ```
-Також були створені параметри для вибору різних стовпчиків даних у одній візуалізації:
-Map Parameter:
+Також були створені параметри для вибору різних стовпчиків даних у одній візуалізації:\
+Map Parameter для Orders_analisys:
 ```
 Map Parameter = {
     ("Average Check", NAMEOF('Orders_analisys'[Average Check]), 0),
@@ -188,7 +188,7 @@ Map Parameter = {
     ("Total Payment Sum", NAMEOF('Orders_analisys'[Total Payment Sum]), 2)
 }
 ```
-Table Parameter
+Table Parameter для delivery_analisys:
 ```
 Table Parameter = {
     ("Category", NAMEOF('Delivery_analisys'[CategoryOtherAdded]), 0),
