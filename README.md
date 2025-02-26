@@ -87,7 +87,7 @@ CategoryOtherAdded = IF(ISBLANK(Delivery_analisys[product_category_name_english]
 ```
 Deliv later then estim = Delivery_analisys[order_estimated_delivery_date] < Delivery_analisys[order_delivered_customer_date]
 ```
-Стовпчик, що копіює тільки дату зі стовпчика order\_delivered\_customer\_date (фактична доставка клієнту), а у випадку якщо цей стовпчик порожній - копіює дату із стовпчика order\_purchase\_timestamp(час оформлення замовлення) для зв'язку таблиці з таблицею Calendar:
+Стовпчик, що копіює тільки дату зі стовпчика order\_delivered\_customer\_date (фактична доставка клієнту), а у випадку якщо ця позиція порожня - копіює дату із стовпчика order\_purchase\_timestamp(час оформлення замовлення) для зв'язку таблиці з таблицею Calendar:
 ```
 OrderDeliveredDate = 
 IF(Delivery_analisys[order_status] = "delivered",
