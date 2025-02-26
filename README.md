@@ -105,7 +105,7 @@ IF(Delivery_analisys[order_status] = "delivered",
     )
 )
 ```
-Стовпчики CategoryOtherAdded, DelivLaterThenEstim та OrderDeliveredDate:\ 
+Стовпчики CategoryOtherAdded, DelivLaterThenEstim та OrderDeliveredDate: 
 ![png](AddedColumnsDelivery.png)\
 Міра LateDeliveryRate, що рахує частку доставок із запізненнями(порівняно з оціненим часом доставки) серед замовлень із статусом delivered:
 ```
