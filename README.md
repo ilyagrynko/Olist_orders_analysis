@@ -188,7 +188,7 @@ Map Parameter = {
     ("Total Payment Sum", NAMEOF('Orders_analisys'[Total Payment Sum]), 2)
 }
 ```
-Table Parameter для delivery_analisys:
+Table Parameter для Delivery_analisys:
 ```
 Table Parameter = {
     ("Category", NAMEOF('Delivery_analisys'[CategoryOtherAdded]), 0),
