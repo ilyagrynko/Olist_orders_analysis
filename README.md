@@ -76,8 +76,8 @@ Calendar = ADDCOLUMNS(
     , "DayText", FORMAT([Date], "d")
     )
 ```
-### Стовпчики та міри, додані до Delivery_analysis:
 ![png](CalendarTable.png)\
+### Стовпчики та міри, додані до Delivery_analysis:
 Стовпчик, що дублює початковий стовпчик з категоріями товарів, але додає катеорію "Other" для порожніх позицій:
 ```
 CategoryOtherAdded = IF(ISBLANK(Delivery_analisys[product_category_name_english]), "Other", Delivery_analisys[product_category_name_english])
